@@ -11,6 +11,11 @@
   height=121.92,  % 48 inches in cm
   scale=1.5
 ]{beamerposter}
+% \usepackage[
+%   size=A0,
+%   orientation=portrait,
+%   scale=1.4
+% ]{beamerposter}
 
 \usepackage{fontspec}
 \usefonttheme{serif}
@@ -26,6 +31,7 @@
 \usepackage{microtype}
 \usepackage{svg}
 \usepackage{caption}
+\captionsetup{margin=0.8em}
 
 \setbeamertemplate{navigation symbols}{}
 
@@ -62,11 +68,10 @@
   \end{beamercolorbox}
   \nointerlineskip
   \begin{beamercolorbox}[rounded=false, sep=0.8em]{block body}
-  \usebeamerfont{block body}\justifying
+  \usebeamerfont{block body}\justifying\setlength\leftskip{0.8em}\setlength\rightskip{0.8em}%
+  \noindent\ignorespaces
 }
-\setbeamertemplate{block end}{
-  \end{beamercolorbox}\vspace{10pt}
-}
+\setbeamertemplate{block end}{\end{beamercolorbox}\vspace{10pt}}
 
 \setbeamertemplate{block alerted begin}{
   \begin{beamercolorbox}[
@@ -77,11 +82,10 @@
   \end{beamercolorbox}
   \nointerlineskip
   \begin{beamercolorbox}[rounded=false, sep=0.8em]{block alerted body}
-  \usebeamerfont{block body}\justifying
+  \usebeamerfont{block body}\justifying\setlength\leftskip{0.8em}\setlength\rightskip{0.8em}%
+  \noindent\ignorespaces
 }
-\setbeamertemplate{block alerted end}{
-  \end{beamercolorbox}\vspace{10pt}
-}
+\setbeamertemplate{block alerted end}{\end{beamercolorbox}\vspace{10pt}}
 
 % ==============================================================================
 % DOCUMENT
@@ -93,7 +97,7 @@
 % HEADER — navy banner drawn as overlay, column holds actual content
 % ==============================================================================
 \begin{tikzpicture}[remember picture, overlay]
-  \fill[CULightBlue] (-1cm,2cm) rectangle (95cm,-16cm);
+  \fill[CULightBlue] (-1cm,5cm) rectangle (95cm,-16cm);
   \fill[CUGold] (-1cm,-16cm) rectangle (95cm,-17.5cm);
 \end{tikzpicture}
 
@@ -128,7 +132,7 @@
       XeSAT 2026 - International Workshop on Applications of Noble Gas Xenon to Science and Technology}
   \end{column}
 \end{columns}
-\vspace{2.0cm}
+\vspace{2.5cm}
 
 % ==============================================================================
 % BODY — two columns, content sized to fill the page height
@@ -175,7 +179,7 @@
 \vspace{1.0cm}
 
 \begin{block}{System Design: In-Situ Leak-Tight Welded System}
-  The system is designed with the following key features to ensure reliability and sensitivity:
+  The system is designed with the key features to ensure reliability and sensitivity:
   \vspace{8pt}
   \begin{itemize}
     \item In-situ auxiliary system directly coupled to the main volume.
