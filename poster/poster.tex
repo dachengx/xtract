@@ -53,34 +53,34 @@
 \setbeamercolor{block alerted body} {fg=black, bg=CUGold!10}
 \setbeamerfont{block alerted title}{size=\large, series=\bfseries}
 
-\setbeamertemplate{block begin}{%
+\setbeamertemplate{block begin}{
   \begin{beamercolorbox}[
       rounded=false, ht=2.8ex, dp=1.2ex,
       leftskip=0.8em, rightskip=0.8em
-    ]{block title}%
+    ]{block title}
     \usebeamerfont{block title}\insertblocktitle
-  \end{beamercolorbox}%
-  \nointerlineskip%
-  \begin{beamercolorbox}[rounded=false, sep=0.8em]{block body}%
-  \usebeamerfont{block body}\justifying%
+  \end{beamercolorbox}
+  \nointerlineskip
+  \begin{beamercolorbox}[rounded=false, sep=0.8em]{block body}
+  \usebeamerfont{block body}\justifying
 }
-\setbeamertemplate{block end}{%
-  \end{beamercolorbox}\vspace{10pt}%
+\setbeamertemplate{block end}{
+  \end{beamercolorbox}\vspace{10pt}
 }
 
-\setbeamertemplate{block alerted begin}{%
+\setbeamertemplate{block alerted begin}{
   \begin{beamercolorbox}[
       rounded=false, ht=2.8ex, dp=1.2ex,
       leftskip=0.8em, rightskip=0.8em
-    ]{block alerted title}%
+    ]{block alerted title}
     \usebeamerfont{block alerted title}\insertblocktitle
-  \end{beamercolorbox}%
-  \nointerlineskip%
-  \begin{beamercolorbox}[rounded=false, sep=0.8em]{block alerted body}%
-  \usebeamerfont{block body}\justifying%
+  \end{beamercolorbox}
+  \nointerlineskip
+  \begin{beamercolorbox}[rounded=false, sep=0.8em]{block alerted body}
+  \usebeamerfont{block body}\justifying
 }
-\setbeamertemplate{block alerted end}{%
-  \end{beamercolorbox}\vspace{10pt}%
+\setbeamertemplate{block alerted end}{
+  \end{beamercolorbox}\vspace{10pt}
 }
 
 % ==============================================================================
@@ -194,6 +194,16 @@
 % ============================================================
 \begin{column}{0.48\linewidth}
 
+\begin{block}{System Design: Drawing}
+  \begin{center}
+    \includegraphics[width=0.3\linewidth, trim=5cm 9.5cm 7cm 4.5cm, clip]{XTRACT _ xtract-20260416_up.pdf}\hfill
+    \includegraphics[width=0.3\linewidth, trim=5cm 8cm 5cm 8cm, clip]{XTRACT _ xtract-20260416_top.pdf}\hfill
+    \includegraphics[width=0.3\linewidth, trim=6cm 9cm 6cm 5cm, clip]{XTRACT _ xtract-20260416_right.pdf} \\[4pt]
+    \captionof{figure}{\small Computer-aided design views of the system from different angles; the supporting frame is omitted for clarity.}
+  \end{center}
+\end{block}
+\vspace{1.0cm}
+
 \begin{block}{Current Status: System Assembled}
   \begin{center}
     \includegraphics[width=0.7\linewidth]{IMG_7969.png} \\[4pt]
@@ -202,18 +212,18 @@
 \end{block}
 \vspace{1.0cm}
 
-\begin{block}{Sensitivity Projection: $\boldsymbol{\mathcal{O}}$(100)~ppq}
-  The limit of sensitivity~($C_T$) will be defined as the concentration at which 90\% of analyses will produce results exceed one standard deviation above 0~ppq. More specifically, the sensitivity limit is so small that the corresponding measured partial pressure~($P_T$) has a 10\% chance to provide $\pm\sigma$ confidence interval covering 0~ppq.
-  \vspace{8pt}
-  The uncertainty~($\sigma_T$) of the sensitivity limit~($C_T$) is estimated by propagating the uncertainty of the background partial pressure measurement~($\sigma_\mathrm{bkg}$) as follows:
-  \begin{equation*}
-    \sigma_T \approx \sigma_\mathrm{bkg}\sqrt{\frac{[k +  c \cdot (C_T - b)]^2 + k^2 / N_\mathrm{bkg}}{N_\mathrm{flw}}}
-  \end{equation*}
-  The constant $c$ characterizes the RGA intrinsic response. The two coefficients~($k$ and $b$, $C = k\cdot P + b$) are determined by the calibration data, which is obtained by measuring the partial pressure of $^{\mathrm{nat}}$Kr with known concentration. The number of background measurements~($N_\mathrm{bkg}$) and the number of Kr measurements~($N_\mathrm{flw}$) are determined by the operation time and the measurement time for each run.
-  \vspace{8pt}
-  By optimizing the operation procedure and the measurement time for each run, we expect to reach a sensitivity of $\boldsymbol{\mathcal{O}}$(100)~ppq using $\boldsymbol{\mathcal{O}}$(100)~g xenon.
-\end{block}
-\vspace{1.0cm}
+% \begin{block}{Sensitivity Projection: $\boldsymbol{\mathcal{O}}$(100)~ppq}
+%   The limit of sensitivity~($C_T$) will be defined as the concentration at which 90\% of analyses will produce results exceed one standard deviation above 0~ppq. More specifically, the sensitivity limit is so small that the corresponding measured partial pressure~($P_T$) has a 10\% chance to provide $\pm\sigma$ confidence interval covering 0~ppq.
+%   \vspace{8pt}
+%   The uncertainty~($\sigma_T$) of the sensitivity limit~($C_T$) is estimated by propagating the uncertainty of the background partial pressure measurement~($\sigma_\mathrm{bkg}$) as follows:
+%   \begin{equation*}
+%     \sigma_T \approx \sigma_\mathrm{bkg}\sqrt{\frac{[k +  c \cdot (C_T - b)]^2 + k^2 / N_\mathrm{bkg}}{N_\mathrm{flw}}}
+%   \end{equation*}
+%   The constant $c$ characterizes the RGA intrinsic response. The two coefficients~($k$ and $b$, $C = k\cdot P + b$) are determined by the calibration data, which is obtained by measuring the partial pressure of $^{\mathrm{nat}}$Kr with known concentration. The number of background measurements~($N_\mathrm{bkg}$) and the number of Kr measurements~($N_\mathrm{flw}$) are determined by the operation time and the measurement time for each run.
+%   \vspace{8pt}
+%   By optimizing the operation procedure and the measurement time for each run, we expect to reach a sensitivity of $\boldsymbol{\mathcal{O}}$(100)~ppq using $\boldsymbol{\mathcal{O}}$(100)~g xenon.
+% \end{block}
+% \vspace{1.0cm}
 
 \begin{alertblock}{Conclusions \& Outlook}
   \begin{itemize}
