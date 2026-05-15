@@ -145,49 +145,39 @@
 \begin{column}{0.48\linewidth}
 
 \begin{block}{Motivation: $\boldsymbol{^{85}}$Kr Background}
-  $\boldsymbol{^{85}}$Kr, which is from the nuclear power plant and nuclear weapons testing, contributes to the electronic recoil background of the dark matter search experiment by $\boldsymbol{\beta}$ decay with a Q-value 687.0~keV~\cite{XENON:2022ltv, LZ:2025zpw, PandaX:2024jjs}.
-  \vspace{8pt}
+  $\boldsymbol{^{85}}$Kr is an important contributor to the electronic-recoil background in liquid-xenon dark matter search experiments. It undergoes $\boldsymbol{\beta}$ decay with a Q-value of 687.0~keV~\cite{XENON:2022ltv,LZ:2025zpw,PandaX:2024jjs}. Due to its 10.7-year half-life, the current atmospheric inventory of $\boldsymbol{^{85}}$Kr is predominantly anthropogenic, mainly originating from nuclear fuel reprocessing and nuclear weapons testing.
+
+  \vspace{16pt}
   \begin{center}
     \includegraphics[width=0.51\linewidth]{bkg_only_full_energy.pdf}\hfill
     \includegraphics[width=0.47\linewidth, trim=0 0 0 14.3cm, clip]{DataPlot_bgfit.pdf} \\[4pt]
-    \captionof{figure}{\small $\boldsymbol{^{85}}$Kr background in XENONnT~\cite{XENON:2022ltv}~(left) and LZ~\cite{LZ:2025zpw}~(right) experiments for electronic recoil new physics search.}
+    \captionof{figure}{\small $\boldsymbol{^{85}}$Kr background contributions in XENONnT~\cite{XENON:2022ltv}~(left) and LZ~\cite{LZ:2025zpw}~(right) electronic-recoil searches.}
   \end{center}
-  \vspace{8pt}
-  The abundance of $\boldsymbol{^{85}}$Kr in $^{\mathrm{nat}}$Kr is taken as $\boldsymbol{2\times10^{-11}}$ based on the seasonal measurements of $\boldsymbol{^{85}}$Kr near XENONnT experiment~\cite{XENON:2022ltv}. The $^{\mathrm{nat}}$Kr concentration in XENONnT was measured to be (56 $\pm$ 36)~parts-per-quadrillion (ppq)~\cite{XENON:2022ltv} using the rare gas mass spectrometry (RGMS) method, which is the most sensitive method to date. However, the large uncertainty of this measurement motivates the development of a new method with better sensitivity and precision.
+  \vspace{16pt}
+
+  The abundance of $\boldsymbol{^{85}}$Kr in $^{\mathrm{nat}}$Kr is taken to be $\boldsymbol{2\times10^{-11}}$~\cite{XENON:2022ltv}. Liquid-xenon dark matter experiments require $^{\mathrm{nat}}$Kr concentrations at the $\boldsymbol{\mathcal{O}}$(100)~ppq level, well below the ppb sensitivity typically achievable with commercially available measurement systems.
+  \vspace{16pt}
+
+  XENONnT removed $^{\mathrm{nat}}$Kr with the XENON1T cryogenic distillation system, while LZ used gas chromatography~\cite{XENON:2016bmq,Ames:2023lvd}. The residual concentrations were $\boldsymbol{(56 \pm 36)}$~ppq in XENONnT~\cite{XENON:2022ltv} (measured by gas chromatography--rare-gas mass spectrometry, GC-RGMS) and $\boldsymbol{(144 \pm 22)}$~ppq in LZ~\cite{LZ:2022ysc} (measured with a liquid-nitrogen~(LN$_2$) cold trap system developed by Prof.~Carter Hall's group at the University of Maryland, College Park).
+  \vspace{16pt}
+
+  At Columbia University, we are refurbishing the original krypton distillation columns from XENON100. To characterize their separation performance, we are developing a Maryland-style system, chosen for its simplicity, robustness, and potential portability.
 \end{block}
 \vspace{1.0cm}
 
-\begin{block}{Methodology: Freeze out Xenon}
-  We propose to measure the $^{\mathrm{nat}}$Kr concentration by Residual Gas Analyzer~(RGA). The xenon in the gaseous mixture has to be frozen out to avoid saturating the RGA. The freeze-out process is achieved by a cold trap, which is cooled below 161.4~K by liquid nitrogen~(LN${_2}$) or cryocooler following the approach of Ref.~\cite{Silk:2023hlt}. The $^{\mathrm{nat}}$Kr can pass through the cold trap and be measured by the RGA, while the xenon is frozen and trapped in the cold trap.
-  \vspace{8pt}
+\begin{block}{Methodology: Cold Trap + RGA}
   \begin{center}
-    \includegraphics[width=0.98\linewidth]{rga_cold_trap-modified 2023 thesis.drawio.pdf} \\[4pt]
-    \captionof{figure}{\small Piping and instrumentation diagram of XTRACT.}
+    \includegraphics[width=0.9\linewidth]{schematic.jpg} \\[4pt]
+    \captionof{figure}{\small Bulk Xe is frozen in an LN$_2$-cooled cold trap, enriching trace Kr in the gas phase~\cite{Armstrong:2025dhy}.}
   \end{center}
-  \vspace{8pt}
-  The operation procedure during measurement is as follows:
-  \begin{itemize}
-    \item Collect the gaseous mixture containing xenon and krypton into the source bottle.
-    \item Cool down the cold trap with liquid nitrogen or a cryocooler.
-    \item Use mass flow controller to control the flow of the gaseous mixture into the cold trap, where xenon is frozen out and Kr passes through.
-    \item Regulate impedance valve to control the total pressure near RGA to be low enough.
-    \item Measure the $^{\mathrm{nat}}$Kr partial pressure versus time by RGA.
-  \end{itemize}
-  \vspace{8pt}
-  The total amount of gas used is $\boldsymbol{\mathcal{O}}$(100)~g. The loss of xenon during each measurement is estimated to be less than 1~g, which is negligible compared to the total xenon inventory of the experiment (several tons).
+  \vspace{16pt}
+
+  The measurement relies on the large difference between the vapor pressures of Xe and Kr at cryogenic temperature. As the Xe sample passes through the cold trap, bulk Xe freezes out while trace $^{\mathrm{nat}}$Kr remains preferentially in the gas phase. This suppresses the Xe load on the residual gas analyzer~(RGA) and effectively enriches the Kr concentration downstream.
+
+  \vspace{16pt}
+  The RGA then monitors the Kr partial pressure, which is converted to the $^{\mathrm{nat}}$Kr concentration in the original Xe sample referring to calibration. This cold-trap enrichment enables sensitivity far below commercial ppb-level gas analysis, targeting the $\mathcal{O}$(100)~ppq regime required by liquid-xenon dark matter experiments.
 \end{block}
 \vspace{1.0cm}
-
-\begin{block}{System Design: In-Situ Leak-Tight Welded System}
-  The system is designed with the key features to ensure reliability and sensitivity:
-  \vspace{8pt}
-  \begin{itemize}
-    \item In-situ auxiliary system directly coupled to the main volume.
-    \item Welded connections throughout the internal gas path minimize potential leak paths.
-    \item A Swagelok VCR\textsuperscript{\textregistered} fitting is used only at the main-volume interface for a removable leak-tight connection.
-    \item The system is tested using LN${_2}$ and cryocooler. Eventually LN$_2$-free operation reduces cryogenic handling complexity.
-\end{itemize}
-\end{block}
 
 \end{column}
 
@@ -198,61 +188,58 @@
 % ============================================================
 \begin{column}{0.48\linewidth}
 
-\begin{block}{System Design: Drawing}
-  \begin{center}
-    \includegraphics[width=0.3\linewidth, trim=5cm 9.5cm 7cm 4.5cm, clip]{XTRACT _ xtract-20260416_up.pdf}\hfill
-    \includegraphics[width=0.3\linewidth, trim=5cm 8cm 5cm 8cm, clip]{XTRACT _ xtract-20260416_top.pdf}\hfill
-    \includegraphics[width=0.3\linewidth, trim=6cm 9cm 6cm 5cm, clip]{XTRACT _ xtract-20260416_right.pdf} \\[4pt]
-    \captionof{figure}{\small Computer-aided design views of the system from different angles; the supporting frame is omitted for clarity.}
-  \end{center}
+\begin{block}{\normalsize{XTRACT: Xenon Residual gas Analyzer with Cold Trap}}
+  \begin{columns}
+    \begin{column}{0.35\linewidth}
+      \begin{center}
+        \includegraphics[width=0.7\linewidth, trim=5cm 9.5cm 7cm 4.5cm, clip]{XTRACT _ xtract-20260416_up.pdf} \\[4pt]
+        \captionof{figure}{\small Side views of XTRACT; the support frame is omitted for clarity.}
+      \end{center}
+    \end{column}
+    \begin{column}{0.65\linewidth}
+      XTRACT adapts the Maryland-style cold trap design with several differentiations:
+      \begin{itemize}
+        \item Cryocooler-based operation, avoiding LN$_2$ handling and enabling continuous running.
+        \item In-situ welded stainless-steel construction for leak tightness and reduced contamination; VCR fittings are used only at the main-volume interfaces.
+        \item Compatibility with XENONnT and other liquid noble gas experiments, including potential underground deployment.
+        \item Programmable logic controller~(PLC)-based automation for sample handling, cold trap operation, and RGA measurements.
+      \end{itemize}
+
+      The system uses only $\boldsymbol{\mathcal{O}}$(100)~g of xenon gas, with an estimated xenon loss below 1~g per measurement, negligible compared with the several-ton xenon inventory.
+    \end{column}
+  \end{columns}
 \end{block}
 \vspace{1.0cm}
 
-\begin{block}{Current Status: System Assembled}
+\begin{alertblock}{Current Status \& Outlook}
   \begin{center}
     \includegraphics[width=0.7\linewidth]{IMG_7969.png} \\[4pt]
-    \captionof{figure}{\small Assembled XTRACT installed on the aluminum frame.}
+    \captionof{figure}{\small Assembled XTRACT system mounted on the aluminum support frame.}
   \end{center}
-\end{block}
-\vspace{1.0cm}
 
-% \begin{block}{Sensitivity Projection: $\boldsymbol{\mathcal{O}}$(100)~ppq}
-%   The limit of sensitivity~($C_T$) will be defined as the concentration at which 90\% of analyses will produce results exceed one standard deviation above 0~ppq. More specifically, the sensitivity limit is so small that the corresponding measured partial pressure~($P_T$) has a 10\% chance to provide $\pm\sigma$ confidence interval covering 0~ppq.
-%   \vspace{8pt}
-%   The uncertainty~($\sigma_T$) of the sensitivity limit~($C_T$) is estimated by propagating the uncertainty of the background partial pressure measurement~($\sigma_\mathrm{bkg}$) as follows:
-%   \begin{equation*}
-%     \sigma_T \approx \sigma_\mathrm{bkg}\sqrt{\frac{[k +  c \cdot (C_T - b)]^2 + k^2 / N_\mathrm{bkg}}{N_\mathrm{flw}}}
-%   \end{equation*}
-%   The constant $c$ characterizes the RGA intrinsic response. The two coefficients~($k$ and $b$, $C = k\cdot P + b$) are determined by the calibration data, which is obtained by measuring the partial pressure of $^{\mathrm{nat}}$Kr with known concentration. The number of background measurements~($N_\mathrm{bkg}$) and the number of Kr measurements~($N_\mathrm{flw}$) are determined by the operation time and the measurement time for each run.
-%   \vspace{8pt}
-%   By optimizing the operation procedure and the measurement time for each run, we expect to reach a sensitivity of $\boldsymbol{\mathcal{O}}$(100)~ppq using $\boldsymbol{\mathcal{O}}$(100)~g xenon.
-% \end{block}
-% \vspace{1.0cm}
-
-\begin{alertblock}{Conclusions \& Outlook}
   \begin{itemize}
-    \item[$\checkmark$] We have designed and assembled a leak-tight system for measuring the $^{\mathrm{nat}}$Kr concentration in xenon with ppq sensitivity.
-    \item[$\checkmark$] The system is currently being commissioned and tested with LN${_2}$ and cryocooler.
-    \item[$\rightarrow$] We expect to reach a sensitivity of $\mathcal{O}$(100)~ppq with $\mathcal{O}$(100)~g xenon, which will provide a more precise measurement of the $^{\mathrm{nat}}$Kr concentration and help reduce the uncertainty of the $\boldsymbol{^{85}}$Kr background in dark matter search experiments.
+    \item[$\checkmark$] Designed and assembled a leak-tight system targeting $\mathcal{O}$(100)~ppq sensitivity for $^{\mathrm{nat}}$Kr measurements in xenon.
+    \item[$\rightarrow$] Commissioning is underway with LN$_2$ cooling, followed by operation tests with a cryocooler.
+    \item[$\rightarrow$] The mobile platform is being developed toward future integration with XENONnT and other liquid noble gas experiments.
   \end{itemize}
 \end{alertblock}
 \vspace{1.0cm}
 
 \begin{block}{References}
-  \footnotesize{\bibliographystyle{ieeetr}\bibliography{poster}}
+  \scriptsize{\bibliographystyle{ieeetr}\bibliography{poster}}
 \end{block}
 
 \begin{columns}[T, totalwidth=\linewidth]
-  \begin{column}{0.8\linewidth}
+  \begin{column}{0.7\linewidth}
     \begin{block}{Acknowledgements}
-      {\footnotesize We gratefully acknowledge support from the National Science Foundation.}
+      We gratefully acknowledge support from the National Science Foundation. We gratefully thank Prof.~Carter Hall and his group at the University of Maryland, College Park, especially Dr.~John Armstrong, for their guidance and for generously sharing their cold-trap design and expertise.
     \end{block}
   \end{column}
   \hfill
-  \begin{column}{0.2\linewidth}
+  \begin{column}{0.3\linewidth}
     \centering
-    \includegraphics[width=0.6\linewidth]{https_xenon_astro_columbia_edu_.pdf} \\[3pt]
-    {\footnotesize The Aprile Group at Columbia University}
+    \includegraphics[width=0.5\linewidth]{https_xenon_astro_columbia_edu_.pdf} \\[3pt]
+    {\footnotesize The Aprile Group\\ at Columbia University}
   \end{column}
 \end{columns}
 
