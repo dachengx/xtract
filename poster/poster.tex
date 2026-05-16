@@ -24,6 +24,7 @@
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{tikz}
+\usetikzlibrary{calc}
 \usepackage{pgfplots}
 \usepackage{xcolor}
 \usepackage{ragged2e}
@@ -143,8 +144,30 @@
 
   \vspace{16pt}
   \begin{center}
-    \includegraphics[width=0.51\linewidth]{bkg_only_full_energy.pdf}\hfill
-    \includegraphics[width=0.47\linewidth, trim=0 0 0 14.3cm, clip]{DataPlot_bgfit.pdf} \\[4pt]
+    \begin{tikzpicture}
+      \node[anchor=south west, inner sep=0] (imgL)
+        {\includegraphics[width=0.51\linewidth]{bkg_only_full_energy.pdf}};
+      \begin{scope}[
+        x={($(imgL.south east)-(imgL.south west)$)},
+        y={($(imgL.north west)-(imgL.south west)$)},
+        shift={(imgL.south west)}]
+        \draw[->, red, ultra thick] (0.25,0.78) -- (0.3,0.89);
+        \draw[->, red, ultra thick] (0.25,0.70) -- (0.3,0.27);
+        \node[above, red, font=\footnotesize] at (0.2,0.7) {$\boldsymbol{^{85}}$Kr};
+      \end{scope}
+    \end{tikzpicture}\hfill
+    \begin{tikzpicture}
+      \node[anchor=south west, inner sep=0] (imgR)
+        {\includegraphics[width=0.47\linewidth, trim=0 0 0 14.3cm, clip]{DataPlot_bgfit.pdf}};
+      \begin{scope}[
+        x={($(imgR.south east)-(imgR.south west)$)},
+        y={($(imgR.north west)-(imgR.south west)$)},
+        shift={(imgR.south west)}]
+        \draw[->, blue, ultra thick] (0.35,0.68) -- (0.2,0.72);
+        \draw[->, blue, ultra thick] (0.38,0.60) -- (0.3,0.40);
+        \node[above, blue, font=\footnotesize] at (0.4,0.6) {$\boldsymbol{^{85}}$Kr};
+      \end{scope}
+    \end{tikzpicture} \\[4pt]
     \captionof{figure}{\small $\boldsymbol{^{85}}$Kr background contributions in electronic-recoil searches of XENONnT~\cite{XENON:2022ltv}~(left) and LZ~\cite{LZ:2025zpw}~(right) experiments.}
   \end{center}
   \vspace{16pt}
